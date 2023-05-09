@@ -40,7 +40,7 @@ pnpm dev
 
 ## Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fhello-world&env=OPENAI_API_HOST,OPENAI_API_KEY,DATABASE_URL,DIRECT_URL,JWT_SECRET_KEY,NOVU_API_SECRET&envDescription=DIRECT_URL&envLink=https%3A%2F%2Fwww.prisma.io%2Fdocs%2Fdata-platform%2Fdata-proxy%2Fprisma-cli-with-data-proxy%23set-a-direct-database-connection-url-in-your-prisma-schema&project-name=gptea-news&repository-name=gptea-news)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fgptea-ai%2Fgptea-news&env=OPENAI_API_HOST,OPENAI_API_KEY,DATABASE_URL,DIRECT_URL,JWT_SECRET_KEY,NOVU_API_SECRET&envDescription=DIRECT_URL&envLink=https%3A%2F%2Fwww.prisma.io%2Fdocs%2Fdata-platform%2Fdata-proxy%2Fprisma-cli-with-data-proxy%23set-a-direct-database-connection-url-in-your-prisma-schema&project-name=gptea-news&repository-name=gptea-news)
 
 ## Credits
   
