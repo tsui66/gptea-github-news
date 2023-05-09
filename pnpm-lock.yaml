@@ -28,6 +28,9 @@ dependencies:
   '@types/react-dom':
     specifier: 18.0.11
     version: registry.npmmirror.com/@types/react-dom@18.0.11
+  '@vercel/analytics':
+    specifier: ^1.0.1
+    version: registry.npmmirror.com/@vercel/analytics@1.0.1
   class-variance-authority:
     specifier: ^0.4.0
     version: registry.npmmirror.com/class-variance-authority@0.4.0(typescript@5.0.2)
@@ -1550,6 +1553,12 @@ packages:
     dependencies:
       '@typescript-eslint/types': registry.npmmirror.com/@typescript-eslint/types@5.59.2
       eslint-visitor-keys: registry.npmmirror.com/eslint-visitor-keys@3.4.0
+    dev: false
+
+  registry.npmmirror.com/@vercel/analytics@1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vercel/analytics/-/analytics-1.0.1.tgz}
+    name: '@vercel/analytics'
+    version: 1.0.1
     dev: false
 
   registry.npmmirror.com/acorn-jsx@5.3.2(acorn@8.8.2):

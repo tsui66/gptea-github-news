@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image';
 
 import { IconLink } from 'src/components/IconLink'
 import { Logo } from 'src/components/Logo'
@@ -84,6 +85,16 @@ export function IntroFooter() {
       In partnership with{' '}
       <div className="font-semibold text-white">OpenAI</div>
       <div className="font-semibold text-white">LangChain</div>
+    </div>
+  )
+}
+
+export function ProductHuntEmbedding() {
+  return (
+    <div>
+      <a href="https://www.producthunt.com/posts/gptea-newsletters?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-gptea&#0045;newsletters" target="_blank">
+        <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=393409&theme=light" alt="GPTea&#0032;Newsletters - &#0032;AI&#0032;newsletter&#0032;recommendations&#0032;using&#0032;ChatGPT&#0032;prompt&#0046; | Product Hunt"  />
+      </a>
     </div>
   )
 }

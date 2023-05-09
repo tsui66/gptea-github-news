@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/Toaster';
 import { Layout } from '@/components/Layout'
 import * as mdxComponents from '@/components/mdx'
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </Layout>
         {/* </MDXProvider> */}
       </ThemeProvider>
+      <Analytics />
     </>
   )
 }
