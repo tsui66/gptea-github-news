@@ -1,0 +1,71 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions"]
+}
+
+datasource db {
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
+  extensions = [vector]
+}
+
+model Document {
+  id         String                       @id @default(cuid())
+  path       String                       @unique
+  checksum   String?
+  meta       Json?
+  type       String?
+  source     String?
+  content    String?
+  tokenCount Int?                         @map("token_count")
+  slug       String?
+  heading    String?
+  embedding  Unsupported("vector(1536)")?
+  createdAt  DateTime                     @default(now()) @map("created_at")
+  updatedAt  DateTime                     @updatedAt @map("updated_at")
+  newsletter Newsletter[]
+
+  @@map("document")
+}
+
+model Subscriber {
+  id              String    @id @default(cuid())
+  email           String
+  defaultPromptId String    @map("default_prompt_id")
+  sentAt          DateTime? @map("sent_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  prompts         Prompt[]
+
+  @@map("subscriber")
+}
+
+model Newsletter {
+  id          String   @id @default(cuid())
+  promptId    String   @map("prompt_id")
+  prompt      Prompt   @relation(fields: [promptId], references: [id])
+  documentId  String   @map("document_id")
+  document    Document @relation(fields: [documentId], references: [id])
+  summary     String
+  score       Int      @default(0)
+  publishedAt String   @map("published_at")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@unique([promptId, documentId], map: "newsletter.promptId_documentId_unique")
+  @@index([score], map: "newsletter.score_index")
+  @@index([publishedAt], map: "newsletter.publishedAt_index")
+  @@map("newsletter")
+}
+
+model Prompt {
+  id           String       @id @default(cuid())
+  name         String?
+  template     String
+  subscriberId String?      @map("subscriber_id")
+  createdAt    DateTime     @default(now()) @map("created_at")
+  subscriber   Subscriber?  @relation(fields: [subscriberId], references: [id])
+  newsletter   Newsletter[]
+
+  @@map("prompt")
+}
