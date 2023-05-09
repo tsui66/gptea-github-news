@@ -85,7 +85,7 @@ export function IntroFooter() {
         In partnership with{' '}
         <Link href="https://openai.com/" target='_blank' className="font-semibold text-white">OpenAI</Link>
         <Link href="https://langchain.com/" target='_blank' className="font-semibold text-white">LangChain</Link>
-        <div class="h-2 w-px bg-slate-500"></div>
+        <div className="h-2 w-px bg-slate-500"></div>
         <Link href="https://gptea.co/privacy" target='_blank'>Privacy policy</Link>
     </div>
   )

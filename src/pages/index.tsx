@@ -1,10 +1,7 @@
-import { SparkleIcon } from 'src/components/SparkleIcon'
 import { article } from 'src/components/mdx'
-import { Children, useEffect } from 'react'
 import Link from 'next/link'
 import { prisma } from 'src/lib/prisma'
 import { Newsletter, Document } from '@prisma/client'
-import useNewsletter from 'src/lib/hooks/use-newsletters'
 
 export const getServerSideProps = async () => {
   let newsletters = await prisma.newsletter.findMany({
