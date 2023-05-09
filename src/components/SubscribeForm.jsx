@@ -32,6 +32,8 @@ export function SubscribeForm() {
       } else {
         throw new Error('An unexpected error occurred');
       }
+    } else {
+      toast.success('Subscription Successful!');
     }
   }
 
