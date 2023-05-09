@@ -82,9 +82,11 @@ export function Intro() {
 export function IntroFooter() {
   return (
     <div className="flex items-baseline gap-x-2 text-[0.8125rem]/6 text-gray-500">
-      In partnership with{' '}
-      <div className="font-semibold text-white">OpenAI</div>
-      <div className="font-semibold text-white">LangChain</div>
+        In partnership with{' '}
+        <Link href="https://openai.com/" target='_blank' className="font-semibold text-white">OpenAI</Link>
+        <Link href="https://langchain.com/" target='_blank' className="font-semibold text-white">LangChain</Link>
+        <div class="h-2 w-px bg-slate-500"></div>
+        <Link href="https://gptea.co/privacy" target='_blank'>Privacy policy</Link>
     </div>
   )
 }
