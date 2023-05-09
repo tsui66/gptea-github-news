@@ -67,7 +67,7 @@ export function Intro() {
         <IconLink href="https://twitter.com/nova_tsui" target="_blank" icon={TwitterIcon} className="flex-none">
           Twitter
         </IconLink>
-        <IconLink href="https://github.com/tsui66/gptea-news" target="_blank" icon={GitHubIcon} className="flex-none">
+        <IconLink href="https://github.com/gptea-ai/gptea-news" target="_blank" icon={GitHubIcon} className="flex-none">
           GitHub
         </IconLink>
         <IconLink href="https://discord.gg/JHkaJgWHwG" target="_blank" icon={DiscordIcon} className="flex-none">
