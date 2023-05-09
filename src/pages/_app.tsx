@@ -15,10 +15,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Commit - Open-source Git client for macOS minimalists</title>
+        <title>GPTea News</title>
         <meta
           name="description"
-          content="Commit is a lightweight Git client you can open from anywhere any time you’re ready to commit your work with a single keyboard shortcut. It’s fast, beautiful, and completely unnecessary."
+          content="Get AI newsletter recommendations tailored to developers and startups using ChatGPT prompt."
         />
       </Head>
       <ThemeProvider attribute="class" disableTransitionOnChange>
